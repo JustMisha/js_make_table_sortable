@@ -2,7 +2,7 @@
   "name": "js_table_sortable",
   "version": "1.0.0",
   "description": "Let make tables sortable",
-  "browser": "./lib/makeTableSortable.js",
+  "browser": "./lib/makeTableSortable.min.js",
   "scripts": {
     "test": "jest test",
     "document": "npm test && jsdoc src README.md --destination docs/html",
