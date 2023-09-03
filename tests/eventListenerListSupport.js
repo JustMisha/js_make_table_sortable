@@ -6,7 +6,7 @@
  */
 /**
  * Overriding addEventListener and removeEventListener to have
- * property eventListenerList in a element to which en event is set
+ * property eventListenerList in an element to which en event is set
  *
  * from https://www.sqlpac.com/en/documents/javascript-listing-active-event-listeners.html
  *
@@ -40,7 +40,6 @@ EventTarget.prototype.removeEventListener = function (event, listener, options) 
     if (!this.eventListenerList[event]) {
         this.eventListenerList[event] = [];
     }
-
     this.eventListenerList[event] = this.eventListenerList[event].filter(function (element) {
         if (!element.listener === listener && !element.options === options) {
             return true;
