@@ -1,0 +1,436 @@
+﻿<html lang="en">
+    <head>
+        <title>Sorting HTML Table with head and body</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <style>
+            h1 {
+              font-size: medium;
+            }
+
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            td {
+                text-align: center;
+            }
+
+            caption {
+                  border-bottom: thin solid;
+                  font-weight: bolder;
+            }
+            dt {
+                font-weight: bolder;
+            }
+            table {
+                margin: 1em;
+            }
+        </style>
+        <!-- Insert here for testing purpose -->
+        <script src="eventListenerListSupport.js"></script>
+    </head>
+    <body>
+        <h1 id="title">Sorting HTML Table with head and body</h1>
+        <table id="test-table">
+            <caption>Click a column header to sort the table by that column</caption>
+            <colgroup>
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 12%;">
+                <col span="1" style="width: 12%;">
+                <col span="1" style="width: 12%;">
+                <col span="1" style="width: 15%;">
+                <col span="1" style="width: 5%;">
+                <col span="1" style="width: 7%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>strings</th>
+                    <th>numbers</th>
+                    <th>percents</th>
+                    <th>dollars</th>
+                    <th>dates_yyyy_mm_dd</th>
+                    <th>dates_dd_mm_yyyy</th>
+                    <th>dates_d(d)_m(m)_yyyy</th>
+                    <th>dates_dd_mm_yyyy__hh_mm_ss</th>
+                    <th style="cursor: help">duration</th>
+                    <th>englishTitles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>A</td>
+                    <td>21</td>
+                    <td>14%</td>
+                    <td>$16</td>
+                    <td>2008-02-28</td>
+                    <td>13-07-2021</td>
+                    <td>15-1-2022</td>
+                    <td>28-12-2012 21:02:12</td>
+                    <td>21:56</td>
+                    <td>The H</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>B</td>
+                    <td>22</td>
+                    <td>15%</td>
+                    <td>$17</td>
+                    <td>2022-09-04</td>
+                    <td>05-11-2013</td>
+                    <td>4-1-2020</td>
+                    <td>12-02-2009 22:58:09</td>
+                    <td>13:49</td>
+                    <td>The I</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>C</td>
+                    <td>23</td>
+                    <td>16%</td>
+                    <td>$18</td>
+                    <td>2009-02-02</td>
+                    <td>09-03-2011</td>
+                    <td>8-5-2022</td>
+                    <td>07-08-2017 04:26:11</td>
+                    <td>59:55</td>
+                    <td>The J</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>D</td>
+                    <td>24</td>
+                    <td>17%</td>
+                    <td>$19</td>
+                    <td>2013-12-22</td>
+                    <td>22-12-2008</td>
+                    <td>23-9-2020</td>
+                    <td>07-09-2005 08:10:47</td>
+                    <td>35:10</td>
+                    <td>The K</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>25</td>
+                    <td>18%</td>
+                    <td>$20</td>
+                    <td>2016-11-28</td>
+                    <td>20-09-2022</td>
+                    <td>2-1-2022</td>
+                    <td>20-07-2017 10:14:01</td>
+                    <td>38:34</td>
+                    <td>The L</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>F</td>
+                    <td>26</td>
+                    <td>19%</td>
+                    <td>$21</td>
+                    <td>2007-10-19</td>
+                    <td>28-04-2005</td>
+                    <td>19-5-2020</td>
+                    <td>21-01-2015 01:55:14</td>
+                    <td>52:40</td>
+                    <td>The M</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>G</td>
+                    <td>1</td>
+                    <td>20%</td>
+                    <td>$22</td>
+                    <td>2009-05-25</td>
+                    <td>10-10-2023</td>
+                    <td>9-11-2022</td>
+                    <td>18-02-2009 11:07:59</td>
+                    <td>04:42</td>
+                    <td>The N</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>H</td>
+                    <td>2</td>
+                    <td>21%</td>
+                    <td>$23</td>
+                    <td>2021-08-09</td>
+                    <td>13-12-2003</td>
+                    <td>10-6-2020</td>
+                    <td>02-02-2004 14:22:14</td>
+                    <td>27:36</td>
+                    <td>The O</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>I</td>
+                    <td>3</td>
+                    <td>22%</td>
+                    <td>$24</td>
+                    <td>2018-09-15</td>
+                    <td>09-04-2021</td>
+                    <td>27-3-2020</td>
+                    <td>07-05-2015 18:37:21</td>
+                    <td>55:35</td>
+                    <td>The P</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>J</td>
+                    <td>4</td>
+                    <td>23%</td>
+                    <td>$25</td>
+                    <td>2007-02-27</td>
+                    <td>04-05-2010</td>
+                    <td>14-2-2022</td>
+                    <td>07-10-2006 17:42:52</td>
+                    <td>10:37</td>
+                    <td>The Q</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>K</td>
+                    <td>5</td>
+                    <td>24%</td>
+                    <td>$26</td>
+                    <td>2014-08-13</td>
+                    <td>27-10-2007</td>
+                    <td>7-8-2021</td>
+                    <td>16-04-2007 21:36:19</td>
+                    <td>41:24</td>
+                    <td>The R</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>L</td>
+                    <td>6</td>
+                    <td>25%</td>
+                    <td>$1</td>
+                    <td>2001-06-16</td>
+                    <td>01-09-2013</td>
+                    <td>28-9-2021</td>
+                    <td>13-09-2009 01:40:26</td>
+                    <td>18:16</td>
+                    <td>The S</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>M</td>
+                    <td>7</td>
+                    <td>26%</td>
+                    <td>$2</td>
+                    <td>2016-09-02</td>
+                    <td>18-08-2012</td>
+                    <td>10-6-2020</td>
+                    <td>23-02-2016 03:60:04</td>
+                    <td>52:27</td>
+                    <td>The T</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>N</td>
+                    <td>8</td>
+                    <td>1%</td>
+                    <td>$3</td>
+                    <td>2019-11-20</td>
+                    <td>10-07-2010</td>
+                    <td>10-8-2021</td>
+                    <td>09-11-2014 17:39:22</td>
+                    <td>32:18</td>
+                    <td>The U</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>O</td>
+                    <td>9</td>
+                    <td>2%</td>
+                    <td>$4</td>
+                    <td>2015-10-01</td>
+                    <td>08-05-2013</td>
+                    <td>23-12-2021</td>
+                    <td>08-06-2015 14:47:23</td>
+                    <td>39:49</td>
+                    <td>The V</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>P</td>
+                    <td>10</td>
+                    <td>3%</td>
+                    <td>$5</td>
+                    <td>2021-12-19</td>
+                    <td>26-09-2004</td>
+                    <td>2-11-2020</td>
+                    <td>10-06-2018 21:39:56</td>
+                    <td>01:56</td>
+                    <td>The W</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Q</td>
+                    <td>11</td>
+                    <td>4%</td>
+                    <td>$6</td>
+                    <td>2018-11-04</td>
+                    <td>18-01-2015</td>
+                    <td>5-11-2022</td>
+                    <td>05-11-2003 07:20:47</td>
+                    <td>57:58</td>
+                    <td>The X</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>R</td>
+                    <td>12</td>
+                    <td>5%</td>
+                    <td>$7</td>
+                    <td>2003-03-23</td>
+                    <td>25-01-2016</td>
+                    <td>9-11-2020</td>
+                    <td>21-01-2014 21:29:53</td>
+                    <td>38:26</td>
+                    <td>The Y</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>S</td>
+                    <td>13</td>
+                    <td>6%</td>
+                    <td>$8</td>
+                    <td>2018-05-26</td>
+                    <td>07-11-2009</td>
+                    <td>4-10-2020</td>
+                    <td>01-10-2015 10:09:45</td>
+                    <td>50:25</td>
+                    <td>The Z</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>T</td>
+                    <td>14</td>
+                    <td>7%</td>
+                    <td>$9</td>
+                    <td>2008-09-17</td>
+                    <td>01-07-2016</td>
+                    <td>27-8-2020</td>
+                    <td>23-05-2020 05:28:43</td>
+                    <td>56:39</td>
+                    <td>The A</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>U</td>
+                    <td>15</td>
+                    <td>8%</td>
+                    <td>$10</td>
+                    <td>2003-10-15</td>
+                    <td>05-04-2018</td>
+                    <td>28-3-2020</td>
+                    <td>02-05-2004 05:21:50</td>
+                    <td>15:10</td>
+                    <td>The B</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>V</td>
+                    <td>16</td>
+                    <td>9%</td>
+                    <td>$11</td>
+                    <td>2010-10-27</td>
+                    <td>13-11-2018</td>
+                    <td>26-12-2020</td>
+                    <td>09-11-2007 02:10:58</td>
+                    <td>03:58</td>
+                    <td>The C</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>W</td>
+                    <td>17</td>
+                    <td>10%</td>
+                    <td>$12</td>
+                    <td>2003-03-11</td>
+                    <td>04-01-2023</td>
+                    <td>24-3-2022</td>
+                    <td>15-05-2009 01:29:14</td>
+                    <td>37:34</td>
+                    <td>The D</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>X</td>
+                    <td>18</td>
+                    <td>11%</td>
+                    <td>$13</td>
+                    <td>2004-11-10</td>
+                    <td>18-04-2019</td>
+                    <td>5-2-2020</td>
+                    <td>13-06-2022 24:13:01</td>
+                    <td>33:51</td>
+                    <td>The E</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Y</td>
+                    <td>19</td>
+                    <td>12%</td>
+                    <td>$14</td>
+                    <td>2009-10-23</td>
+                    <td>16-02-2023</td>
+                    <td>21-1-2021</td>
+                    <td>09-08-2006 15:24:51</td>
+                    <td>47:29</td>
+                    <td>The F</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Z</td>
+                    <td>20</td>
+                    <td>13%</td>
+                    <td>$15</td>
+                    <td>2012-06-25</td>
+                    <td>06-10-2020</td>
+                    <td>4-8-2021</td>
+                    <td>28-09-2008 05:53:45</td>
+                    <td>38:18</td>
+                    <td>The G</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="../src/makeTableSortable.js"></script>
+        <script>
+            window.addEventListener("load", function() {
+                if (window.makeTableSortable !== undefined) {
+
+                    makeTableSortable.addCompareMethod("justString",
+                        function (a, b) {
+                            if (a < b) {
+                                return -1;
+                            }
+                            return (a > b ? 1 : 0);
+                        });
+
+                    let columnsRules = {
+                        1: 'justString',
+                        2: 'numbers',
+                        3: 'percents',
+                        4: 'dollars',
+                        5: 'dates_yyyy_mm_dd',
+                        6: 'dates_dd_mm_yyyy',
+                        7: 'dates_dd_mm_yyyy',
+                        8: 'dates_dd_mm_yyyy__hh_mm_ss',
+                        9: 'durations',
+                        10: 'englishTitles'
+                    };
+
+                    makeTableSortable.setup("test-table", columnsRules);
+
+                }
+            });
+        </script>
+    </body>
+</html>

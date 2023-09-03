@@ -1,0 +1,30 @@
+{
+  "name": "js_table_sortable",
+  "version": "1.0.0",
+  "description": "Let make tables sortable",
+  "browser": "./lib/makeTableSortable.js",
+  "scripts": {
+    "test": "jest test",
+    "document": "npm test && jsdoc src README.md --destination docs/html",
+    "build": "npm run document && node-minify --compressor uglify-js --input src/makeTableSortable.js --output lib/makeTableSortable.min.js"
+  },
+  "author": "Mikhail Trusov",
+  "license": "MIT",
+  "devDependencies": {
+    "@node-minify/cli": "^8.0.6",
+    "@node-minify/uglify-js": "^8.0.6",
+    "jsdom": "22.1.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": ["./src/**"],
+    "coverageThreshold": {
+      "global": {
+        "lines": 90,
+        "branches": 80
+      }
+    },
+    "coverageDirectory": "coverage",
+    "coverageProvider": "v8"
+  }
+}
