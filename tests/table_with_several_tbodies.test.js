@@ -120,5 +120,5 @@ const testsForColumnsArgs = [
     }
 ];
 
-createTestSuite("Testing over a table with a head and body", "tests/table_with_several_tbodies.html", testsForColumnsArgs);
+createTestSuite("Testing over a table with a head and several bodies", "tests/table_with_several_tbodies.html", testsForColumnsArgs);
 
