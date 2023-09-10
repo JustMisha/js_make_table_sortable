@@ -1,14 +1,22 @@
 {
   "name": "js_table_sortable",
   "version": "1.0.0",
-  "description": "Let make tables sortable",
+  "description": "Make HTML tables sortable",
+  "keywords": [
+    "table",
+    "sorting",
+    "html"
+  ],
   "browser": "./lib/makeTableSortable.min.js",
+  "files": [
+    "./lib/"
+  ],
   "scripts": {
     "test": "jest test",
     "document": "npm test && jsdoc src README.md --destination docs/html",
     "build": "npm run document && node-minify --compressor uglify-js --input src/makeTableSortable.js --output lib/makeTableSortable.min.js"
   },
-  "author": "Mikhail Trusov",
+  "author": "Mikhail Trusov <admin@superprogrammist.ru> (https://superprogrammist.ru)",
   "license": "MIT",
   "devDependencies": {
     "@node-minify/cli": "^8.0.6",

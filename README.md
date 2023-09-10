@@ -55,7 +55,7 @@ If necessary, we can reverse our decision:
 ```
     <script>
         if (window.makeTableSortable !== undefined) {
-            makeTableSortable.unset("tableId");
+            makeTableSortable.unset("test-table");
         }
     </script>
 ```
