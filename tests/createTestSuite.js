@@ -2,12 +2,12 @@
     unordered, long, fart
 */
 /*global
-    expect
+    expect, describe, test, beforeEach, require, module
 */
 
-function creatTestSuite(testsDescription, sourceHtmlFilePath, testsForColumnsArgs) {
+function createTestSuiteForTableOfCertainKind(testDescription, sourceHtmlFilePath, testsForColumnsArgs) {
 
-    return describe(testsDescription, function () {
+    return describe(testDescription, function () {
 
         const headRowIndex = 0;
         const idColumnIndex = 0;
@@ -65,7 +65,7 @@ function creatTestSuite(testsDescription, sourceHtmlFilePath, testsForColumnsArg
             });
         };
 
-        beforeEach( async () => {
+        beforeEach(async () => {
             const {JSDOM} = require("jsdom");
             jsdom = await JSDOM.fromFile(sourceHtmlFilePath, {
                 resources: "usable",
@@ -79,11 +79,11 @@ function creatTestSuite(testsDescription, sourceHtmlFilePath, testsForColumnsArg
             clickEvent = new window.MouseEvent("click", {"bubbles": true});
         });
 
-        testsForColumnsArgs.forEach( function (testForColumnArgs) {
-            createTestForColumn.apply(this, Object.values(testForColumnArgs));
+        testsForColumnsArgs.forEach(function (testForColumnArgs) {
+            createTestForColumn(...Object.values(testForColumnArgs));
         });
 
     });
-};
+}
 
-module.exports = creatTestSuite;
+module.exports = createTestSuiteForTableOfCertainKind;
