@@ -92,7 +92,7 @@ module.exports = [
         "idAfterFirstClick": "17",
         "valueAfterFirstClick": "05-11-2003 07:20:47",
         "idAfterSecondClick": "24",
-        "valueAfterSecondClick": "13-06-2022 24:13:01",
+        "valueAfterSecondClick": "13-06-2022 24:13:01"
     },
     {
         "columnName": "duration",
@@ -103,7 +103,7 @@ module.exports = [
         "idAfterFirstClick": "16",
         "valueAfterFirstClick": "01:56",
         "idAfterSecondClick": "3",
-        "valueAfterSecondClick": "59:55",
+        "valueAfterSecondClick": "59:55"
     },
     {
         "columnName": "englishTitles",
@@ -114,6 +114,6 @@ module.exports = [
         "idAfterFirstClick": "20",
         "valueAfterFirstClick": "The A",
         "idAfterSecondClick": "19",
-        "valueAfterSecondClick": "The Z",
-    },
+        "valueAfterSecondClick": "The Z"
+    }
 ];

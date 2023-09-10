@@ -17,7 +17,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "1",
         "valueAfterFirstClick": "A",
         "idAfterSecondClick": "8",
-        "valueAfterSecondClick": "H",
+        "valueAfterSecondClick": "H"
     },
     {
         "columnName": "numbers",
@@ -28,7 +28,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "7",
         "valueAfterFirstClick": "1",
         "idAfterSecondClick": "6",
-        "valueAfterSecondClick": "26",
+        "valueAfterSecondClick": "26"
     },
     {
         "columnName": "percents",
@@ -39,7 +39,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "1",
         "valueAfterFirstClick": "14%",
         "idAfterSecondClick": "8",
-        "valueAfterSecondClick": "21%",
+        "valueAfterSecondClick": "21%"
     },
     {
         "columnName": "dollars",
@@ -50,7 +50,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "1",
         "valueAfterFirstClick": "$16",
         "idAfterSecondClick": "8",
-        "valueAfterSecondClick": "$23",
+        "valueAfterSecondClick": "$23"
     },
     {
         "columnName": "dates_yyyy_mm_dd",
@@ -61,7 +61,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "6",
         "valueAfterFirstClick": "2007-10-19",
         "idAfterSecondClick": "2",
-        "valueAfterSecondClick": "2022-09-04",
+        "valueAfterSecondClick": "2022-09-04"
     },
     {
         "columnName": "dates_dd_mm_yyyy",
@@ -72,7 +72,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "8",
         "valueAfterFirstClick": "13-12-2003",
         "idAfterSecondClick": "7",
-        "valueAfterSecondClick": "10-10-2023",
+        "valueAfterSecondClick": "10-10-2023"
     },
     {
         "columnName": "dates_d(d)_m(m)_yyyy",
@@ -83,7 +83,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "2",
         "valueAfterFirstClick": "4-1-2020",
         "idAfterSecondClick": "7",
-        "valueAfterSecondClick": "9-11-2022",
+        "valueAfterSecondClick": "9-11-2022"
     },
     {
         "columnName": "dates_dd_mm_yyyy__hh_mm_ss",
@@ -94,7 +94,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "8",
         "valueAfterFirstClick": "02-02-2004 14:22:14",
         "idAfterSecondClick": "3",
-        "valueAfterSecondClick": "07-08-2017 04:26:11",
+        "valueAfterSecondClick": "07-08-2017 04:26:11"
     },
     {
         "columnName": "duration",
@@ -105,7 +105,7 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "7",
         "valueAfterFirstClick": "04:42",
         "idAfterSecondClick": "3",
-        "valueAfterSecondClick": "59:55",
+        "valueAfterSecondClick": "59:55"
     },
     {
         "columnName": "englishTitles",
@@ -116,8 +116,8 @@ const testsForColumnsArgs = [
         "idAfterFirstClick": "1",
         "valueAfterFirstClick": "The H",
         "idAfterSecondClick": "8",
-        "valueAfterSecondClick": "The O",
-    },
+        "valueAfterSecondClick": "The O"
+    }
 ];
 
 createTestSuite("Testing over a table with a head and body", "tests/table_with_several_tbodies.html", testsForColumnsArgs);
