@@ -4,7 +4,15 @@
 /*global
     expect, describe, test, beforeEach, require, module
 */
-
+/**
+ * Create a test suite for the table of the certain kind:
+ * with one or more table bodies
+ *
+ * @param {string} testDescription - a description of the test
+ * @param {string} sourceHtmlFilePath - a file path of the page with a table
+ * @param {array} testsForColumnsArgs - set of parameters for testing different columns
+ * @returns {function}
+ */
 function createTestSuiteForTableOfCertainKind(testDescription, sourceHtmlFilePath, testsForColumnsArgs) {
 
     return describe(testDescription, function () {
