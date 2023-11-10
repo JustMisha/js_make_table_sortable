@@ -10,7 +10,7 @@ const createTestSuite = require("./createTestSuite.js");
 const testsForColumnsArgs = [
     {
         "columnName": "strings",
-        "description": "Click the stings head cell sorting the strings column",
+        "description": "Click the strings head cell sorting the strings column",
         "columnIndex": 1,
         "firstIdValue": "1",
         "firstValue": "A",
