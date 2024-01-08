@@ -227,22 +227,22 @@
          *
          * @param {Object} currEvent
          */
-        function normaliseTarget(evt) {
-            let targ;
-            evt = normaliseEvent(evt);
-            if (evt.target) {
-                targ = evt.target;
-            } else if (evt.srcElement) {
-                targ = evt.srcElement;
+        function normaliseTarget(currEvent) {
+            let target;
+            currEvent = normaliseEvent(currEvent);
+            if (currEvent.target) {
+                target = currEvent.target;
+            } else if (currEvent.srcElement) {
+                target = currEvent.srcElement;
             }
             // defeat Safari bug: in Safari
             // if an event takes place on an element that contains text,
             // this text node, and not the element,
             // becomes the target of the event.
-            if (targ.nodeType === 3) {
-                targ = targ.parentNode;
+            if (target.nodeType === 3) {
+                target = target.parentNode;
             }
-            return targ;
+            return target;
         }
 
         /**
