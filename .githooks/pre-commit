@@ -6,12 +6,6 @@
 # it wants to stop the commit.
 #
 
-# if there is no php file available
-# then trying php.cmd
-if [ ! -f python ]; then
-    alias python=python.cmd
-fi
-
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
 	against=HEAD
@@ -49,6 +43,7 @@ EOF
 	exit 1
 fi
 
+# run tests
 (npm test)
 if [ $? -ne 0 ]
 then
